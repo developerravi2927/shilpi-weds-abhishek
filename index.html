@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shilpi ❤️ Abhishek</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
- <!-- Royal Hero Section -->
-<section class="hero royal-hero">
-    <div class="hero-overlay">
-      <h1 class="hero-title">Shilpi ❤️ Abhishek</h1>
-      <p class="hero-quote">“Two souls with but a single thought, two hearts that beat as one.”</p>
-      <p class="hero-date">08 May 2025</p>
-      <div class="scroll-down">⬇</div>
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-in" data-aos-duration="1500">
+    <div class="overlay">
+      <h1>Shilpi ❤️ Abhishek</h1>
+      <p class="quote">“Two souls with but a single thought, two hearts that beat as one.”</p>
+      <p class="date">08 May 2025</p>
     </div>
   </section>
-  
 
-  <section class="countdown-section">
+  <!-- Countdown Section -->
+  <section class="countdown-section" data-aos="zoom-in" data-aos-duration="1200">
     <h2>Countdown to the Big Day</h2>
     <div id="countdown">
       <div><span id="days">00</span><small>Days</small></div>
@@ -30,28 +29,23 @@
       <div><span id="seconds">00</span><small>Seconds</small></div>
     </div>
   </section>
-  <!-- Royal Couple Section -->
-<section class="royal-couple">
-    <h2 class="section-title">Meet the Couple</h2>
-    <div class="couple-container">
-      <div class="person-card">
-        <img src="images/bride.jpeg" alt="Shilpi Pandey" class="person-photo"/>
-        <h3>Shilpi Pandey</h3>
-        <p>Daughter of<br><strong>Mr. Rakesh Pandey & Mrs. Savitri Pandey</strong></p>
-      </div>
-      <div class="person-card">
-        <img src="images/groom.jpeg" alt="Abhishek Shukla" class="person-photo"/>
-        <h3>Abhishek Shukla</h3>
-        <p>Son of<br><strong>Late Mr. Surendra Kumar Shukla & Mrs. Anamika Shukla</strong></p>
-      </div>
+
+  <!-- Couple Section -->
+  <section class="couple" data-aos="fade-up" data-aos-duration="1300">
+    <div class="person">
+      <img src="images/bride.jpeg" alt="Shilpi Pandey" />
+      <h2>Shilpi Pandey</h2>
+      <p>Daughter of Mr. Rakesh Pandey & Mrs. Savitri Pandey</p>
+    </div>
+    <div class="person">
+      <img src="images/groom.jpeg" alt="Abhishek Shukla" />
+      <h2>Abhishek Shukla</h2>
+      <p>Son of Late Mr. Surendra Kumar Shukla & Mrs. Anamika Shukla</p>
     </div>
   </section>
-  
-
-  
 
   <!-- Events -->
-  <section class="events">
+  <section class="events" data-aos="fade-right" data-aos-duration="1300">
     <h2>Wedding Events</h2>
     <ul>
       <li><strong>Haldi:</strong> 05 May 2025</li>
@@ -63,55 +57,45 @@
   </section>
 
   <!-- RSVP -->
-  <section class="rsvp">
+  <section class="rsvp" data-aos="fade-left" data-aos-duration="1300">
     <h2>RSVP</h2>
     <p>Kindly contact: Sahilendra Pandey - 9454931680</p>
   </section>
-  <!-- Map Section -->
-<section class="map-section">
-    <h2>Venue Location</h2>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12368.755362097443!2d81.55999858019712!3d26.27492320814137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a538cf407739f%3A0xfd6e8bdb4a9786c8!2sPure%20Bhagwandeen%20Pandey%20ka%20Purwa!5e1!3m2!1sen!2sin!4v1744380329537!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </section>
-  
 
   <!-- Footer -->
-  <footer>
+  <footer data-aos="fade-in" data-aos-duration="1000">
     <p>Made with ❤️ for Shilpi & Abhishek | 08.05.2025</p>
   </footer>
+
+  <!-- Countdown Script -->
   <script>
     const countDownDate = new Date("May 8, 2025 20:00:00").getTime();
-  
     const x = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
-  
+
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
+
       document.getElementById("days").innerHTML = days;
       document.getElementById("hours").innerHTML = hours;
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
-  
+
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "It's Wedding Time! 💖";
       }
     }, 1000);
   </script>
-  
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
