@@ -17,6 +17,17 @@
     </div>
   </section>
 
+  <section class="countdown-section">
+    <h2>Countdown to the Big Day</h2>
+    <div id="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+  </section>
+  
+
   <!-- Couple Section -->
   <section class="couple">
     <div class="person">
@@ -53,6 +64,30 @@
   <footer>
     <p>Made with ❤️ for Shilpi & Abhishek | 08.05.2025</p>
   </footer>
+  <script>
+    const countDownDate = new Date("May 8, 2025 20:00:00").getTime();
+  
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+  
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+  
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "It's Wedding Time! 💖";
+      }
+    }, 1000);
+  </script>
+  
 
 </body>
 </html>
