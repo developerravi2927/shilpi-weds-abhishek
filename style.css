@@ -200,4 +200,22 @@ body {
       font-size: 0.7rem;
     }
   }
+  .map-section {
+    padding: 2rem 1rem;
+    background-color: #fffaf5;
+    text-align: center;
+  }
   
+  .map-section h2 {
+    color: #b45f06;
+    margin-bottom: 1rem;
+  }
+  
+  .map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  }
+    
