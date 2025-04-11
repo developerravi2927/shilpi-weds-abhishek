@@ -218,4 +218,104 @@ body {
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.15);
   }
+ /* Royal Hero Section */
+.royal-hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    border: 3px solid gold;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+    color: #fff;
+    animation: fadeIn 2s ease;
+  }
+  
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fffbe6;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .scroll-down {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    animation: bounce 2s infinite;
+    color: #ffd700;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+   /* Royal Couple Section */
+.royal-couple {
+    background: #fdf6f0;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #c49b66;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .couple-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .person-card {
+    background: #fff;
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .person-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .person-photo {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
     
