@@ -1,43 +1,107 @@
+/* Global */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff5f5;
-    color: #333;
     margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #fffaf5;
   }
   
-  .container {
+  h1, h2 {
+    font-family: 'Georgia', serif;
+    margin: 0;
+  }
+  
+  p {
+    margin: 0.5em 0;
+  }
+  
+  /* Hero */
+  .hero {
+    background: url('images/bride.jpeg') center/cover no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
+    position: relative;
   }
   
-  h1 {
+  .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .hero h1 {
     font-size: 3rem;
-    color: #d6336c;
   }
   
   .quote {
     font-style: italic;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
   
-  .photos img {
+  .date {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Couple */
+  .couple {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+  
+  .person {
+    text-align: center;
+  }
+  
+  .person img {
     width: 200px;
-    height: 260px;
+    height: 200px;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 20px;
-    margin: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 5px solid #f2d0a9;
   }
   
-  .details {
-    text-align: left;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-top: 2rem;
+  .person h2 {
+    margin-top: 1rem;
+    color: #b45f06;
+  }
+  
+  /* Events */
+  .events {
+    background-color: #fffaf5;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .events ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .events li {
+    margin: 0.5rem 0;
+  }
+  
+  /* RSVP */
+  .rsvp {
+    padding: 2rem 1rem;
+    background-color: #f2e8dc;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #b45f06;
+    color: white;
   }
   
