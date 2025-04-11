@@ -40,6 +40,7 @@ body {
   .quote {
     font-style: italic;
     margin-top: 1rem;
+    font-size: 1.2rem;
   }
   
   .date {
@@ -104,6 +105,8 @@ body {
     background: #b45f06;
     color: white;
   }
+  
+  /* Countdown Section */
   .countdown-section {
     text-align: center;
     background-color: #fff8f0;
@@ -113,15 +116,88 @@ body {
   #countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    font-size: 1.5rem;
-    margin-top: 20px;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #fff4f4;
+    border-radius: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   #countdown div {
-    background: #fff;
-    padding: 15px;
+    background: #ffccd5;
+    color: #800000;
+    padding: 10px 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 70px;
   }
-    
+  
+  #countdown div span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  #countdown div small {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .quote {
+      font-size: 1rem;
+    }
+  
+    .date {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .couple,
+    .events,
+    .rsvp {
+      padding: 1.5rem 0.5rem;
+    }
+  
+    .person img {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .person h2 {
+      font-size: 1.1rem;
+    }
+  
+    .person p {
+      font-size: 0.9rem;
+    }
+  
+    #countdown {
+      gap: 10px;
+    }
+  
+    #countdown div {
+      padding: 8px 12px;
+      min-width: 60px;
+    }
+  
+    #countdown div span {
+      font-size: 1.4rem;
+    }
+  
+    #countdown div small {
+      font-size: 0.7rem;
+    }
+  }
+  
